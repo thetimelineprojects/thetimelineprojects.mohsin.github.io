@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Mohsin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/16b5fac33e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/watermark.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                    <li><a href="socials.html">Socials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="subtitle" style="padding-left: 40%;">Socials</h1>
+        <div id="socials">
+            <div class="tab-titles" style="padding-left: 30%;">
+                <i class="fa-brands fa-facebook"></i>  <p class="tab-links active-link" onclick="opentab('skills')">  Facebook</p> 
+                <i class="fa-brands fa-instagram"></i>  <p class="tab-links" onclick="opentab('experience')">Instagram</p>
+                <i class="fa-brands fa-youtube"></i> <p class="tab-links" onclick="opentab('education')">Youtube</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills" onclick="opentab('skills')">
+            
+            </div>
+            <div class="tab-contents" id="experience">
+                <div class='sk-instagram-feed' data-embed-id='176395'></div><script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul class="skillsdes">
+                    <li><span>SSC</span><br>Ideal School & College</li>
+                    <li><span>HSC</span><br>Sabujbagh Govt College</li>
+        </div> 
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+        </script>
+</body>
+</html>
