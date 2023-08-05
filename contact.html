@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Mohsin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/16b5fac33e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/watermark.png" class="logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                    <li><a href="socials.html">Socials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>mmohsin0804@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>01999999999</p>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder= "Your Name" required> 
+                        <input type="email" name="Email" placeholder= "Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyrighted by Muhammad Mohsin</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        const scriptURL = '<https://script.google.com/macros/s/AKfycbzMWYPgOXPrbq59h-QuVfUgyfKnnVlipRUkW3xKTP4jbvPHO6Z1LFuuwJdFxpt8gE5BCQ/exec>'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
