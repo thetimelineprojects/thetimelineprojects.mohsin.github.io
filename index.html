@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Mohsin</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/16b5fac33e.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -12,10 +13,11 @@
             <nav>
                 <img src="Images/watermark.png" class="logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="https://mmohsin.carrd.co/#work">Projects</a></li>
-                    <li><a href="#">Contact me</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                    <li><a href="socials.html">Socials</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,14 +43,14 @@
                         </div>
                         <div class="about-col-2">
                             <h1 class="subtitle">About Me</h1>
-                            <p class="description">This is Muhammad Mohsin. <br>I am an hobbitual editor. I have been editing for the past 2 or 3 years. I have worked with some organizations and looking forward to improving my work. "The Timeline Originals" is one of my original contents. Enjoy my work!!</p>
+                            <p class="description">This is Muhammad Mohsin. <br>I am an hobbitual editor. I have been editing for the past 2 or 3 years. Enjoy my work!!</p>
 
                             <div class="tab-titles">
                                 <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                                 <p class="tab-links" onclick="opentab('experience')">Experience</p>
                                 <p class="tab-links" onclick="opentab('education')">Education</p>
                             </div>
-                            <div class="tab-contents active-tab" onclick="opentab('skills')">
+                            <div class="tab-contents active-tab" id="skills" onclick="opentab('skills')">
                                 <ul class="skillsdes">
                                     <li><span>Video Editing</span><br>Long Form Youtube Videos</li>
                                     <li><span>Web Designing</span><br>Block Editor based Website Building</li>
@@ -73,11 +75,79 @@
                 </div>
             </div>
         </div>
+
+<!----------------services--------->
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">Services</h1>
+        <div class="services-list"> 
+            <div>
+                <i class="fa-solid fa-video"></i>
+                <h2>Video <br>Editing</h2>
+                <p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-book-open"></i>
+                <h2>Book <br>Designing</h2>
+                <p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-wordpress"></i>
+                <h2>Website Building</h2>
+                <p>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,</p>
+                <a href="contact.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!----------projects-------->
+<div id="portfolio">
+    <div class="container">
+          <h1 class="subtitle">Projects</h1>
+          <div class="work-list">
+            <div class="work">
+                <img src="Images/background.png" alt="Work1">
+                <div class="layer">
+                    <h3>Long Form Youtube Video</h3>
+                    <p>Minim occaecat ea enim commodo est sunt eu Lorem culpa Lorem fugiat eiusmod.</p>
+                    <br>
+                    <b>Video Editing</b>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work">
+                <img src="http://sgcd.edu.bd/wp-content/uploads/2019/05/IMG_4475-2.jpg" alt="Work2">
+                <div class="layer">
+                    <h3>A view of Sabujbagh Govt College</h3>
+                    <p>A tour of Sabujbagh Govt College</p>
+                    <br>
+                    <b>Video Editing</b>
+                    <a href="https://youtu.be/2gcfBVsLABs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+              <div class="work">
+                <img src="Images/momsrecipe.png" alt="Work3">
+                <div class="layer">
+                    <h3>Mom's Recipe</h3>
+                    <p>Minim occaecat ea enim commodo est sunt eu Lorem culpa Lorem fugiat eiusmod.</p>
+                    <br>
+                    <b>Website Building</b>
+                    <a href="https://momsreceta.wordpress.com/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+              </div>
+          </div>
+          <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+
     </main>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-          strings: ['Video Editor', 'Web Desiner', "Book Designer", "Video Editor" ],
+          strings: ['Video Editor', 'Web Designer', "Book Designer", "Video Editor" ],
           typeSpeed: 50,
         });
       </script>
@@ -93,7 +163,7 @@ function opentab(tabname){
         tabcontent.classList.remove("active-tab");
     }
     event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classlist.add
+    document.getElementById(tabname).classList.add("active-tab");
 }
 
 </script>
